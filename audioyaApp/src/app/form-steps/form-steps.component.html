@@ -1,21 +1,8 @@
 <div class="h-56 grid grid-cols-1 content-center px-4">
-    <div>
-        <div id="card-steps" class="max-w-sm rounded overflow-hidden shadow-lg">
-            <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Datos del Paciente</div>
-                <div class="content-center mb-2">
-                    <input type="text" placeholder="Nombre Completo" class="form-input px-4 py-3 rounded-full">
-                </div>
-                <div class="content-center mb-2">
-                    <input type="text" placeholder="Edad" class="form-input px-4 py-3 rounded-full">
-                </div>
-                <div class="content-center mb-2">
-                    <input type="text" placeholder="Genero" class="form-input px-4 py-3 rounded-full">
-                </div>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-
-            </div>
-        </div>
+  <div class="content-center">
+    <div id="card-steps" class="max-w-sm rounded overflow-hidden shadow-lg">
+      <app-step-one (nextStep)="nextStep()" *ngIf="step === 1"></app-step-one>
+      <app-step-two (nextStep)="nextStep()" *ngIf="step === 2"></app-step-two>
     </div>
+  </div>
 </div>
