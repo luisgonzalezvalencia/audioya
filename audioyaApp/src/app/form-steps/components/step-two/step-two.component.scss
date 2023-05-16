@@ -1,3 +1,11 @@
 .form-input {
-    width: 14rem;
-  }
+  width: 14rem;
+}
+
+.btn-actions {
+  height: 10em;
+}
+
+.btn-actions.selected {
+  border: 1px solid #000;
+}

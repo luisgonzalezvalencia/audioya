@@ -1,4 +1,4 @@
-import {  Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-step-two',
@@ -15,11 +15,16 @@ export class StepTwoComponent {
 
   }
 
-  ngOnInit(gr: string): void {
-    this.grado = gr;
+  ngOnInit(): void {
+
   }
 
   onNextStep() {
+    console.log(this.grado);
+  }
+
+  setGrado(gr: string) {
+    this.grado = gr;
     console.log(this.grado);
   }
 }

@@ -3,12 +3,21 @@
     <div class="content-center mb-2">
         <div class="content-center mb-2">
             <div class="px-6 pt-4 pb-2">
-                <button type="button" Value="Leve-Sebero" (click)="ngOnInit('Peofundo')"
-                    class="btn btn-outline-dark">Leve-Severo</button>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-                <button type="button" Value="Profundo" (click)="ngOnInit('Peofundo')"
-                    class="btn btn-outline-dark">Profundo</button>
+                <div class="grid grid-rows-1 grid-flow-col gap-4">
+                    <div>
+                        <button type="button" [class]="grado === 'LEVESEVERO' ? 'selected': ''"
+                            (click)="setGrado('LEVESEVERO')"
+                            class="btn-actions inline-block rounded bg-success mr-2 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white">
+                            Leve-Severo
+                        </button>
+
+                        <button type="button" [class]="grado === 'PROFUNDO' ? 'selected': ''"
+                            (click)="setGrado('PROFUNDO')"
+                            class="btn-actions inline-block rounded bg-danger px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white">
+                            Profundo
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="px-6 pt-4 pb-2">
