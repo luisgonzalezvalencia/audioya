@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormStepsComponent } from './form-steps.component';
+import { StepThreeComponent } from './step-three.component';
 
-describe('FormStepsComponent', () => {
-  let component: FormStepsComponent;
-  let fixture: ComponentFixture<FormStepsComponent>;
+describe('StepThreeComponent', () => {
+  let component: StepThreeComponent;
+  let fixture: ComponentFixture<StepThreeComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FormStepsComponent]
+      declarations: [StepThreeComponent]
     });
-    fixture = TestBed.createComponent(FormStepsComponent);
+    fixture = TestBed.createComponent(StepThreeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

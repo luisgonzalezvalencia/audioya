@@ -21,6 +21,7 @@ export class StepTwoComponent {
 
   onNextStep() {
     console.log(this.grado);
+    this.nextStep.emit();
   }
 
   setGrado(gr: string) {

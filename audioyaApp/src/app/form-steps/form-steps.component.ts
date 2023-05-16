@@ -13,7 +13,7 @@ export class FormStepsComponent implements OnInit {
     this.step = 1;
   }
 
-  nextStep() {
+  setNextStep() {
     this.step++;
   }
 

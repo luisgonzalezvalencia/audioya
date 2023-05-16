@@ -1,9 +1,9 @@
 <div class="h-56 grid grid-cols-1 content-center px-4">
   <div class="content-center">
     <div id="card-steps" class="max-w-sm rounded overflow-hidden shadow-lg">
-      <app-step-two></app-step-two>
-      <!--<app-step-one (nextStep)="nextStep()" *ngIf="step === 1"></app-step-one> -->
-      <app-step-two (nextStep)="nextStep()" *ngIf="step === 2"></app-step-two>
+      <app-step-one (nextStep)="setNextStep()" *ngIf="step === 1"></app-step-one>
+      <app-step-two (nextStep)="setNextStep()" *ngIf="step === 2"></app-step-two>
+      <app-step-three (nextStep)="setNextStep()" *ngIf="step === 3"></app-step-three>
     </div>
   </div>
 </div>
