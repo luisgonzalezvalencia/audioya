@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-step-three',
@@ -6,5 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./step-three.component.scss']
 })
 export class StepThreeComponent {
+  @Output()
+  nextStep = new EventEmitter<any>();
 
+  public zona: string = "";
+
+  constructor() {
+
+  }
+
+  ngOnInit(): void {
+
+  }
+
+  onNextStep() {
+    console.log(this.zona);
+    this.nextStep.emit();
+  }
+
+  setZona(zn: string) {
+    this.zona = zn;
+    console.log(this.zona);
+  }
 }
+
