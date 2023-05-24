@@ -1,7 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
-    background-color: rgb(229 231 235);
+  background-color: rgb(229 231 235);
+  font-size: larger;
+}
+
+@font-face {
+  font-family: "BigNoodle";
+  src: url("/assets/fonts/big_noodle_titling.ttf");
+}
+
+.form-control {
+  font-size: 20px !important;
+}
+
+* {
+  font-family: "BigNoodle";
 }
