@@ -8,6 +8,10 @@ import { FormStepsComponent } from './form-steps/form-steps.component';
 import { StepOneComponent } from './form-steps/components/step-one/step-one.component';
 import { StepTwoComponent } from './form-steps/components/step-two/step-two.component';
 import { StepThreeComponent } from './form-steps/components/step-three/step-three.component';
+import { StepFourComponent } from './form-steps/components/step-four/step-four.component';
+import { StepFiveComponent } from './form-steps/components/step-five/step-five.component';
+import { StepSixComponent } from './form-steps/components/step-six/step-six.component';
+import { StepSevenComponent } from './form-steps/components/step-seven/step-seven.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { StepThreeComponent } from './form-steps/components/step-three/step-thre
     FormStepsComponent,
     StepOneComponent,
     StepTwoComponent,
-    StepThreeComponent
+    StepThreeComponent,
+    StepFourComponent,
+    StepFiveComponent,
+    StepSixComponent,
+    StepSevenComponent
   ],
   imports: [
     BrowserModule,

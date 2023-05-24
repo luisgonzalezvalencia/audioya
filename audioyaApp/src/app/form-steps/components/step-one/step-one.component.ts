@@ -24,7 +24,6 @@ export class StepOneComponent implements OnInit {
   }
 
   onNextStep() {
-    console.log(this.nombre + " " + this.edad + " " + this.genero);
     this.nextStep.emit({
       nombre: this.nombre,
       edad: this.edad,
