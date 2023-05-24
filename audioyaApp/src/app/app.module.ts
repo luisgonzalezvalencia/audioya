@@ -12,6 +12,8 @@ import { StepFourComponent } from './form-steps/components/step-four/step-four.c
 import { StepFiveComponent } from './form-steps/components/step-five/step-five.component';
 import { StepSixComponent } from './form-steps/components/step-six/step-six.component';
 import { StepSevenComponent } from './form-steps/components/step-seven/step-seven.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { StepSevenComponent } from './form-steps/components/step-seven/step-seve
     StepFourComponent,
     StepFiveComponent,
     StepSixComponent,
-    StepSevenComponent
+    StepSevenComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
