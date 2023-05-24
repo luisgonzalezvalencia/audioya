@@ -32,5 +32,10 @@ export class StepOneComponent implements OnInit {
     })
   }
 
+  nextDisabled(): boolean {
+    //comparamos si los datos estan vacios, devolvemos disabled = true
+    return this.nombre == "" || this.edad == null || this.genero == "";
+  }
+
 
 }

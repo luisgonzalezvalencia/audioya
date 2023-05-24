@@ -20,7 +20,7 @@
 </div>
 <div class="row form-group">
   <div class="px-6 pt-4 pb-2">
-    <button type="button" (click)="onNextStep()" class="btn btn-primary">
+    <button [disabled]="nextDisabled()" type="button" (click)="onNextStep()" class="btn btn-primary">
       Siguiente
     </button>
   </div>
