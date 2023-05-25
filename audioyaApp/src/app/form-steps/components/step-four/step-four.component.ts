@@ -24,5 +24,6 @@ export class StepFourComponent {
 
   setEnfermedades(enfermedad: string) {
     this.enfermedades = enfermedad;
+    console.log(this.enfermedades)
   }
 }

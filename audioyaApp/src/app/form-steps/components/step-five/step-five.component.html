@@ -1,1 +1,28 @@
-<p>step-five works!</p>
+<h4>Pérdida auditiva</h4>
+<div class="row form-group">
+    <div class="col-md-4">
+        <button type="button" [class]="perdida === 'LEVE O SEVERA' ? 'selected': ''"
+            (click)="setPerdida('LEVE O SEVERA')" class="btn btn-default btn-actions btn-block">
+            LEVE O SEVERA
+        </button>
+    </div>
+    <div class="col-md-4">
+        <button type="button" [class]="perdida === 'MODERADA' ? 'selected': ''"
+            (click)="setPerdida('MODERADA')" class="btn btn-default btn-actions btn-block">
+            MODERADA
+        </button>
+    </div>
+    <div class="col-md-4">
+        <button type="button" [class]="perdida === 'EN ALTAS FRECUENCIAS' ? 'selected': ''" (click)="setPerdida('EN ALTAS FRECUENCIAS')"
+            class="btn btn-default btn-actions btn-block">
+            EN ALTAS FRECUENCIAS
+        </button>
+    </div>
+</div>
+<div class="row form-group">
+    <div class="px-6 pt-4 pb-2">
+        <button type="button" (click)="onNextStep()" class="btn btn-primary">
+            Siguiente
+        </button>
+    </div>
+</div>

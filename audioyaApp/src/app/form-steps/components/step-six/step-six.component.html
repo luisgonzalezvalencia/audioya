@@ -1,1 +1,22 @@
-<p>step-six works!</p>
+<h4>Tipo "leve o severa"</h4>
+<div class="row form-group">
+    <div class="col-md-4">
+        <button type="button" [class]="tipo === 'VISIBLE' ? 'selected': ''"
+            (click)="setTipo('VISIBLE')" class="btn btn-default btn-actions btn-block">
+            VISIBLE
+        </button>
+    </div>
+    <div class="col-md-4">
+        <button type="button" [class]="tipo === 'TIPO' ? 'selected': ''"
+            (click)="setTipo('NO VISIBLE')" class="btn btn-default btn-actions btn-block">
+            NO VISIBLE
+        </button>
+    </div>
+</div>
+<div class="row form-group">
+    <div class="px-6 pt-4 pb-2">
+        <button type="button" (click)="onNextStep()" class="btn btn-primary">
+            Siguiente
+        </button>
+    </div>
+</div>
