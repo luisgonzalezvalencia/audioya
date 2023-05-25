@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-step-seven',
@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./step-seven.component.scss']
 })
 export class StepSevenComponent {
+  @Output()
+  nextStep = new EventEmitter<any>();
+  public malformacion: string = ""
 
+  constructor() {
+
+  }
+
+  ngOnInit(): void {
+
+  }
+
+  onNextStep() {
+    this.nextStep.emit();
+  }
+
+  setMalformacion( malformaciones: string ){
+    this.malformacion = malformaciones
+    console.log(this.malformacion)
+  }
 }
