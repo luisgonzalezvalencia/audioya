@@ -15,6 +15,7 @@ import { StepSevenComponent } from './form-steps/components/step-seven/step-seve
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { StepEightComponent } from './form-steps/components/step-eight/step-eight.component';
+import { StepNineComponent } from './form-steps/components/step-nine/step-nine.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { StepEightComponent } from './form-steps/components/step-eight/step-eigh
     StepSevenComponent,
     FooterComponent,
     HeaderComponent,
-    StepEightComponent
+    StepEightComponent,
+    StepNineComponent
   ],
   imports: [
     BrowserModule,

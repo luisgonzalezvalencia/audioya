@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-step-eight',
-  templateUrl: './step-eight.component.html',
-  styleUrls: ['./step-eight.component.scss']
+  selector: 'app-step-nine',
+  templateUrl: './step-nine.component.html',
+  styleUrls: ['./step-nine.component.scss']
 })
-export class StepEightComponent {
+export class StepNineComponent {
   @Output()
   nextStep = new EventEmitter<any>();
 
@@ -14,7 +14,6 @@ export class StepEightComponent {
   }
 
   ngOnInit(): void {
-
   }
 
   onNextStep() {
