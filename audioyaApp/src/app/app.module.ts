@@ -16,6 +16,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { StepEightComponent } from './form-steps/components/step-eight/step-eight.component';
 import { StepNineComponent } from './form-steps/components/step-nine/step-nine.component';
+import { StepTenComponent } from './form-steps/components/step-ten/step-ten.component';
+import { StepElevenComponent } from './form-steps/components/step-eleven/step-eleven.component';
+import { StepTwelveComponent } from './form-steps/components/step-twelve/step-twelve.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { StepNineComponent } from './form-steps/components/step-nine/step-nine.c
     FooterComponent,
     HeaderComponent,
     StepEightComponent,
-    StepNineComponent
+    StepNineComponent,
+    StepTenComponent,
+    StepElevenComponent,
+    StepTwelveComponent
   ],
   imports: [
     BrowserModule,
