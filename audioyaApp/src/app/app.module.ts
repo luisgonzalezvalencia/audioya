@@ -19,6 +19,8 @@ import { StepNineComponent } from './form-steps/components/step-nine/step-nine.c
 import { StepTenComponent } from './form-steps/components/step-ten/step-ten.component';
 import { StepElevenComponent } from './form-steps/components/step-eleven/step-eleven.component';
 import { StepTwelveComponent } from './form-steps/components/step-twelve/step-twelve.component';
+import { StepThirteenComponent } from './form-steps/components/step-thirteen/step-thirteen.component';
+import { StepFouteenComponent } from './form-steps/components/step-fouteen/step-fouteen.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { StepTwelveComponent } from './form-steps/components/step-twelve/step-tw
     StepNineComponent,
     StepTenComponent,
     StepElevenComponent,
-    StepTwelveComponent
+    StepTwelveComponent,
+    StepThirteenComponent,
+    StepFouteenComponent
   ],
   imports: [
     BrowserModule,
