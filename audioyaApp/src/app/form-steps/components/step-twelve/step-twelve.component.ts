@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-step-twelve',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./step-twelve.component.scss']
 })
 export class StepTwelveComponent {
+  @Output()
+  nextStep = new EventEmitter<any>();
 
+  constructor() {
+
+  }
+
+  ngOnInit(): void {
+  }
+
+  onNextStep() {
+    this.nextStep.emit();
+  }
 }
