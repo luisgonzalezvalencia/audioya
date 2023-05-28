@@ -29,7 +29,7 @@ export class FormStepsComponent implements OnInit {
   public step: number = 0;
 
   ngOnInit(): void {
-    this.step = 1;
+    this.step = 8;
   }
 
   setNextStep() {
