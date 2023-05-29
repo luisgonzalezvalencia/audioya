@@ -1,20 +1,21 @@
 <h4>NO PRESENTA MALFORMACIONES</h4>
 <div class="row form-group">
-    <h5 class="card-title">"IMPLANTE DE OÍDO MEDIO" O "IMPLANTE COCLEAR"</h5>
-    <div class="col-md-6">
-        <img src="https://volveraescuchar.com/wp-content/uploads/2021/01/imp_oido_med.jpg"
-            class="img-thumbnail" alt="...">
-    </div>
-    <div class="col-md-6">
-        <img src="https://institutointegralaudiologico.com/wp-content/uploads/2017/09/cochlear.0.jpg"
-            class="img-thumbnail" alt="...">
-    </div>
+  <h5 class="card-title">"IMPLANTE DE OÍDO MEDIO" O "IMPLANTE COCLEAR"</h5>
 
+  <div class="col-md-6">
+    <img src="../../../../assets/images/oidomedio.jpg" [class]="option === 'OIDOMEDIO' ? 'selected': ''"
+      (click)="option = 'OIDOMEDIO'" class="img-responsive img-rounded" alt="Oido Medio">
+  </div>
+
+  <div class="col-md-6">
+    <img src="../../../../assets/images/implantecoclear.jpg" [class]="option === 'IMPLANTECOCLEAR' ? 'selected': ''"
+      (click)="option = 'IMPLANTECOCLEAR'" class="img-responsive img-rounded" alt="Implante Coclear">
+  </div>
 </div>
 <div class="row form-group">
-    <div class="px-6 pt-4 pb-2">
-        <button type="button" (click)="onNextStep()" class="btn btn-primary">
-            Siguiente
-        </button>
-    </div>
+  <div class="px-6 pt-4 pb-2">
+    <button type="button" (click)="onNextStep()" class="btn btn-primary">
+      Siguiente
+    </button>
+  </div>
 </div>

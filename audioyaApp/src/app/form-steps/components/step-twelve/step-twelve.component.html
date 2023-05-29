@@ -1,12 +1,14 @@
 <h4>PÉRDIDA AUDITIVA MODERADA</h4>
 <div class="row form-group">
-  <h5 class="card-title">"AUDÍFONO INTRTACANAL" O "AUDÍFONO RITE"</h5>
+  <h5 class="card-title">"AUDÍFONO INTRACANAL" O "AUDÍFONO RITE"</h5>
   <div class="col-md-6">
-    <img src="../../../../assets/images/intracanal.jpg" class="img-responsive img-rounded" alt="...">
+    <img src="../../../../assets/images/intracanal.jpg" [class]="option === 'INTRACANAL' ? 'selected': ''"
+      (click)="option = 'INTRACANAL'" class="img-responsive img-rounded" alt="...">
   </div>
 
   <div class="col-md-6">
-    <img src="../../../../assets/images/audifonorite.png" class="img-responsive img-rounded" alt="...">
+    <img src="../../../../assets/images/audifonorite.png" [class]="option === 'RITE' ? 'selected': ''"
+      (click)="option = 'RITE'" class="img-responsive img-rounded" alt="...">
   </div>
 
 </div>

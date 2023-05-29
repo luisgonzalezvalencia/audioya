@@ -35,3 +35,21 @@ img {
   max-height: 210px;
   width: -webkit-fill-available;
 }
+
+img:hover {
+  cursor: pointer;
+}
+
+img.selected {
+  border: 5px solid #000;
+}
+
+.panel {
+  -webkit-box-shadow: 5px 5px 10px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 10px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 10px -3px rgba(0, 0, 0, 0.75);
+}
+
+.panel-default {
+  border: unset;
+}

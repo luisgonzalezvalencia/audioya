@@ -9,6 +9,8 @@ export class StepThirteenComponent {
   @Output()
   nextStep = new EventEmitter<any>();
 
+  public option: string = "";
+
   constructor() {
 
   }
