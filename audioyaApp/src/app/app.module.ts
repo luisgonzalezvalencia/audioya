@@ -21,6 +21,7 @@ import { StepElevenComponent } from './form-steps/components/step-eleven/step-el
 import { StepTwelveComponent } from './form-steps/components/step-twelve/step-twelve.component';
 import { StepThirteenComponent } from './form-steps/components/step-thirteen/step-thirteen.component';
 import { StepFouteenComponent } from './form-steps/components/step-fouteen/step-fouteen.component';
+import { InformeComponent } from './form-steps/components/informe/informe.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { StepFouteenComponent } from './form-steps/components/step-fouteen/step-
     StepElevenComponent,
     StepTwelveComponent,
     StepThirteenComponent,
-    StepFouteenComponent
+    StepFouteenComponent,
+    InformeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 export enum GRADOPERDIDA {
-  LEVE = 'Leve',
-  SEVERO = 'Severo'
+  LEVESEVERA = 'Leve o Severa',
+  MODERADA = 'Moderada',
+  ALTASFRECUENCIAS = 'Altas Frecuencias'
 }
 
 export enum TIPOPERDIDA {
@@ -11,12 +12,20 @@ export enum TIPOPERDIDA {
   MIXTA = 'Mixta'
 }
 
+export enum ENFERMEDADES {
+  CONGENITAS = 'Congénitas',
+  PREEXISTENTES = 'Pre-existentes',
+  NO = 'No presenta'
+}
+
+
 export interface Informe {
   nombre: string;
   edad: number;
   genero: string;
   gradoPerdida: GRADOPERDIDA,
   tipoPerdida: TIPOPERDIDA,
+  enfermedadesPre: ENFERMEDADES
 }
 
 @Component({
@@ -29,7 +38,7 @@ export class FormStepsComponent implements OnInit {
   public step: number = 0;
 
   ngOnInit(): void {
-    this.step = 8;
+    this.step = 1;
   }
 
   setNextStep() {
