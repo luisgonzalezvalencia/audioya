@@ -2,8 +2,8 @@
   <div class="col-md-6 col-md-offset-3">
     <div id="card-steps" class="panel panel-default">
       <div class="panel-body">
-        <app-step-one (nextStep)="setNextStep()" *ngIf="step === 1"></app-step-one>
-        <app-step-two (nextStep)="setNextStep()" *ngIf="step === 2"></app-step-two>
+        <app-step-one [(resumen)]="resumen" (nextStep)="setNextStep()" *ngIf="step === 1"></app-step-one>
+        <app-step-two [(resumen)]="resumen" (nextStep)="setNextStep()" *ngIf="step === 2"></app-step-two>
         <app-step-three (nextStep)="setNextStep()" *ngIf="step === 3"></app-step-three>
         <app-step-four (nextStep)="setNextStep()" *ngIf="step === 4"></app-step-four>
         <app-step-five (nextStep)="setNextStep()" *ngIf="step === 5"></app-step-five>

@@ -1,21 +1,21 @@
 <h4>Grado de Pérdida Auditiva del Paciente</h4>
 <div class="row form-group">
   <div class="col-md-6">
-    <button type="button" [class]="grado === 'LEVESEVERO' ? 'selected': ''" (click)="setGrado('LEVESEVERO')"
-      class="btn btn-default btn-actions btn-block">
-      Leve-Severo
+    <button type="button" [class]="resumen.gradoPerdida === gradoPerdidaEnum.LEVEMODERADA ? 'selected': ''"
+      (click)="setGrado(gradoPerdidaEnum.LEVEMODERADA)" class="btn btn-default btn-actions btn-block">
+      Leve-Moderada
     </button>
   </div>
   <div class="col-md-6">
-    <button type="button" [class]="grado === 'PROFUNDO' ? 'selected': ''" (click)="setGrado('PROFUNDO')"
-      class="btn btn-default btn-actions btn-block">
+    <button type="button" [class]="resumen.gradoPerdida === gradoPerdidaEnum.PROFUNDA ? 'selected': ''"
+      (click)="setGrado(gradoPerdidaEnum.PROFUNDA)" class="btn btn-default btn-actions btn-block">
       Profundo
     </button>
   </div>
 </div>
 <div class="row form-group">
   <div class="px-6 pt-4 pb-2">
-    <button type="button" (click)="onNextStep()" class="btn btn-primary">
+    <button type="button" [disabled]="disabled()" (click)="onNextStep()" class="btn btn-primary">
       Siguiente
     </button>
   </div>

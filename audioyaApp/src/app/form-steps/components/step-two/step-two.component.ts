@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { GRADOPERDIDA, Informe } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-two',
@@ -9,23 +10,27 @@ export class StepTwoComponent {
   @Output()
   nextStep = new EventEmitter<any>();
 
-  public grado: string = "";
+  @Input()
+  resumen: Partial<Informe> = {};
+
+  @Output()
+  resumenChange = new EventEmitter<Partial<Informe>>();
+
+  gradoPerdidaEnum: typeof GRADOPERDIDA = GRADOPERDIDA;
 
   constructor() {
 
   }
 
-  ngOnInit(): void {
-
-  }
-
   onNextStep() {
-    console.log(this.grado);
     this.nextStep.emit();
   }
 
-  setGrado(gr: string) {
-    this.grado = gr;
-    console.log(this.grado);
+  setGrado(gr: GRADOPERDIDA) {
+    this.resumen.gradoPerdida = gr;
+  }
+
+  disabled(): boolean {
+    return this.resumen.gradoPerdida === undefined;
   }
 }

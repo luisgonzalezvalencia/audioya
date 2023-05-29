@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 export enum GRADOPERDIDA {
-  LEVESEVERA = 'Leve o Severa',
+  LEVEMODERADA = 'Leve o Moderada',
   MODERADA = 'Moderada',
+  PROFUNDA = 'Profunda',
   ALTASFRECUENCIAS = 'Altas Frecuencias'
 }
 
@@ -36,13 +37,34 @@ export interface Informe {
 export class FormStepsComponent implements OnInit {
 
   public step: number = 0;
+  public resumen: Partial<Informe> = {
+    nombre: '',
+    genero: ''
+  };
 
   ngOnInit(): void {
     this.step = 1;
   }
 
   setNextStep() {
+    console.log(this.resumen);
+    //gestionamos la logica entre los distintos pasos.
+    //paso 3 el camino cambia segun el rango etario y nivel de perdida
+
+    //si el grado es LEVEMODERADA y es menor de edad, vamos al step 4
+    if (this.step == 3 && this.resumen.edad && this.resumen.edad < 18 && this.resumen.gradoPerdida == GRADOPERDIDA.LEVEMODERADA) {
+      this.step = 4; //saltamos al paso 4
+      return;
+    }
+
+    //si el grado es LEVEMODERADA y es mayor de edad, vamos al step 5
+    if (this.step == 3 && this.resumen.edad && this.resumen.edad >= 18 && this.resumen.gradoPerdida == GRADOPERDIDA.LEVEMODERADA) {
+      this.step = 5; //saltamos al paso 4
+      return;
+    }
+
     this.step++;
+    return;
   }
 
 }

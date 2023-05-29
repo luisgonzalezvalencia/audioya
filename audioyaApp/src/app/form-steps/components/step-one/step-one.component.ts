@@ -1,39 +1,34 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Informe } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-one',
   templateUrl: './step-one.component.html',
   styleUrls: ['./step-one.component.scss']
 })
-export class StepOneComponent implements OnInit {
+export class StepOneComponent {
+
   @Output()
   nextStep = new EventEmitter<any>();
 
-  public nombre: string = "";
-  public edad: number | undefined;
-  public genero: string = "";
+  @Input()
+  resumen: Partial<Informe> = {};
+
+  @Output()
+  resumenChange = new EventEmitter<Partial<Informe>>();
+
 
   constructor() {
 
   }
 
-  ngOnInit(): void {
-    this.nombre = "";
-    this.edad = undefined;
-    this.genero = "";
-  }
-
   onNextStep() {
-    this.nextStep.emit({
-      nombre: this.nombre,
-      edad: this.edad,
-      genero: this.genero
-    })
+    this.nextStep.emit();
   }
 
   nextDisabled(): boolean {
     //comparamos si los datos estan vacios, devolvemos disabled = true
-    return this.nombre == "" || this.edad == null || this.genero == "";
+    return this.resumen.nombre == "" || this.resumen.edad == null || this.resumen.genero == "";
   }
 
 
