@@ -9,6 +9,8 @@ export class StepFouteenComponent {
   @Output()
   nextStep = new EventEmitter<any>();
 
+  public option: string = "";
+
   constructor() {
 
   }

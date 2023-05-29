@@ -3,11 +3,14 @@
   <h5 class="card-title">"IMPLANTE DE CONDUCCIÓN ÓSEA" O "IMPLANTE DE TRONCO ENCEFALICO"</h5>
 
   <div class="col-md-6">
-    <img src="../../../../assets/images/conduccionosea.jpg" class="img-responsive img-rounded" alt="...">
+    <img src="../../../../assets/images/conduccionosea.jpg" [class]="option === 'CONDUCCIONOSEA' ? 'selected': ''"
+      (click)="option = 'CONDUCCIONOSEA'" class="img-responsive img-rounded" alt="...">
   </div>
 
   <div class="col-md-6">
-    <img src="../../../../assets/images/troncoencefalico.jpg" class="img-responsive img-rounded" alt="...">
+    <img src="../../../../assets/images/troncoencefalico.jpg" [class]="option === 'TRONCOENCEFALICO' ? 'selected': ''"
+    (click)="option = 'TRONCOENCEFALICO'"
+     class="img-responsive img-rounded" alt="...">
   </div>
 </div>
 <div class="row form-group">
