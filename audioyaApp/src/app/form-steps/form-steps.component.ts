@@ -62,6 +62,12 @@ export class FormStepsComponent implements OnInit {
       this.step = 5; //saltamos al paso 4
       return;
     }
+    
+    //si el grado es PROFUNDA y es menor o mayor de edad, vamos al step 7
+    if (this.step == 3 && this.resumen.edad && this.resumen.edad >= 18 || this.resumen.edad && this.resumen.edad < 18 && this.resumen.gradoPerdida == GRADOPERDIDA.PROFUNDA) {
+      this.step = 7; //saltamos al paso 4
+      return;
+    } 
 
     this.step++;
     return;
