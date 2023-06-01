@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 export enum GRADOPERDIDA {
   LEVEMODERADA = 'Leve o Moderada',
+  LEVESEVERA = 'Leve o Severa',
   MODERADA = 'Moderada',
   PROFUNDA = 'Profunda',
   ALTASFRECUENCIAS = 'Altas Frecuencias'

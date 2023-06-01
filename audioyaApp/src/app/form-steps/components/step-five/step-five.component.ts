@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { GRADOPERDIDA, Informe } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-five',
@@ -8,7 +9,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class StepFiveComponent {
   @Output()
   nextStep = new EventEmitter<any>();
-  public perdida: string = ""
+
+  @Input()
+  resumen: Partial<Informe> = {}
+
+  @Output()
+  resumenChange = new EventEmitter<Partial<Informe>>();
+
+  gradoPerdidaEnum: typeof GRADOPERDIDA = GRADOPERDIDA
 
   constructor() {
 
@@ -22,8 +30,11 @@ export class StepFiveComponent {
     this.nextStep.emit();
   }
 
-  setPerdida( nivelPerdida: string ){
-    this.perdida = nivelPerdida
-    console.log(this.perdida)
+  setPerdida( nivelPerdida: GRADOPERDIDA){
+    this.resumen.gradoPerdida = nivelPerdida
+  }
+
+  disabled(): boolean{
+    return this.resumen.gradoPerdida === undefined;
   }
 }
