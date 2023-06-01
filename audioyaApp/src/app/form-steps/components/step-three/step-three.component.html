@@ -1,19 +1,19 @@
 <h4>Zona Afectada del Paciente</h4>
 <div class="row form-group">
     <div class="col-md-4">
-        <button type="button" [class]="zona === 'CONDUCTIVA' ? 'selected': ''" (click)="setZona('CONDUCTIVA')"
+        <button type="button" [class]="resumen.tipoPerdida === tipoPerdidaEnum.CONDUCTIVA ? 'selected': ''" (click)="setZona(tipoPerdidaEnum.CONDUCTIVA)"
             class="btn btn-default btn-actions btn-block">
             Hipoacusia Conductiva
         </button>
     </div>
     <div class="col-md-4">
-        <button type="button" [class]="zona === 'PERCEPTIVA' ? 'selected': ''" (click)="setZona('PERCEPTIVA')"
+        <button type="button" [class]="resumen.tipoPerdida === tipoPerdidaEnum.PERCEPTIVA ? 'selected': ''" (click)="setZona(tipoPerdidaEnum.PERCEPTIVA)"
             class="btn btn-default btn-actions btn-block">
             Hipoacusia Perceptiva
         </button>
     </div>
     <div class="col-md-4">
-        <button type="button" [class]="zona === 'MIXTA' ? 'selected': ''" (click)="setZona('MIXTA')"
+        <button type="button" [class]="resumen.tipoPerdida === tipoPerdidaEnum.MIXTA ? 'selected': ''" (click)="setZona(tipoPerdidaEnum.MIXTA)"
             class="btn btn-default btn-actions btn-block">
             Hipoacusia Mixta
         </button>

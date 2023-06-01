@@ -59,13 +59,19 @@ export class FormStepsComponent implements OnInit {
 
     //si el grado es LEVEMODERADA y es mayor de edad, vamos al step 5
     if (this.step == 3 && this.resumen.edad && this.resumen.edad >= 18 && this.resumen.gradoPerdida == GRADOPERDIDA.LEVEMODERADA) {
-      this.step = 5; //saltamos al paso 4
+      this.step = 5; //saltamos al paso 5
       return;
     }
     
     //si el grado es PROFUNDA y es menor o mayor de edad, vamos al step 7
     if (this.step == 3 && this.resumen.edad && this.resumen.edad >= 18 || this.resumen.edad && this.resumen.edad < 18 && this.resumen.gradoPerdida == GRADOPERDIDA.PROFUNDA) {
-      this.step = 7; //saltamos al paso 4
+      this.step = 7; //saltamos al paso 7
+      return;
+    } 
+
+    //en step 4, si hay enfermedades congénitas, vamos al step 8 "DIADEMAS VO"
+    if (this.step == 4 && this.resumen.enfermedadesPre == ENFERMEDADES.CONGENITAS) {
+      this.step = 8; //saltamos al paso 4
       return;
     } 
 

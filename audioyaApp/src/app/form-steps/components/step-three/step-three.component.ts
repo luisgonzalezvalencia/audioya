@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TIPOPERDIDA, Informe } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-three',
@@ -9,7 +10,13 @@ export class StepThreeComponent {
   @Output()
   nextStep = new EventEmitter<any>();
 
-  public zona: string = "";
+  @Input()
+  resumen: Partial<Informe> = {}
+
+  @Output()
+  resumenChange = new EventEmitter<Partial<Informe>>();
+
+  tipoPerdidaEnum: typeof TIPOPERDIDA = TIPOPERDIDA
 
   constructor() {
 
@@ -20,13 +27,15 @@ export class StepThreeComponent {
   }
 
   onNextStep() {
-    console.log(this.zona);
     this.nextStep.emit();
   }
 
-  setZona(zn: string) {
-    this.zona = zn;
-    console.log(this.zona);
+  setZona(zn: TIPOPERDIDA) {
+    this.resumen.tipoPerdida = zn;
+  }
+
+  disabled(): boolean{
+    return this.resumen.tipoPerdida === undefined;
   }
 }
 
