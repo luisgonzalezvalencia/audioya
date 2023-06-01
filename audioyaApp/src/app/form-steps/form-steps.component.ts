@@ -64,7 +64,7 @@ export class FormStepsComponent implements OnInit {
       return;
     }
     
-    //si el grado es PROFUNDA y es menor o mayor de edad, vamos al step 7
+    //si el grado es PROFUNDA y es menor o mayor de edad, vamos al step 3
     if (this.step == 3 && this.resumen.edad && this.resumen.edad >= 18 || this.resumen.edad && this.resumen.edad < 18 && this.resumen.gradoPerdida == GRADOPERDIDA.PROFUNDA) {
       this.step = 7; //saltamos al paso 7
       return;
@@ -72,7 +72,13 @@ export class FormStepsComponent implements OnInit {
 
     //en step 4, si hay enfermedades congénitas, vamos al step 8 "DIADEMAS VO"
     if (this.step == 4 && this.resumen.enfermedadesPre == ENFERMEDADES.CONGENITAS) {
-      this.step = 8; //saltamos al paso 4
+      this.step = 8; //saltamos al paso 8
+      return;
+    } 
+
+    // en step 4, si hay engermedades preexistentes o no hay, vamos al step 10 "RETROAURICULAR"
+    if (this.step == 4 && this.resumen.enfermedadesPre == ENFERMEDADES.NO || this.resumen.enfermedadesPre == ENFERMEDADES.PREEXISTENTES) {
+      this.step = 10; //saltamos al paso 10
       return;
     } 
 
