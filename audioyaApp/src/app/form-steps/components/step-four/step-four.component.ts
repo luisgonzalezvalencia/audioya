@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ENFERMEDADES, Informe } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-four',
@@ -8,7 +9,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class StepFourComponent {
   @Output()
   nextStep = new EventEmitter<any>();
-  public enfermedades: string = "";
+
+  @Input()
+  resumen: Partial<Informe> = {}
+  
+  @Output()
+  resumenChange = new EventEmitter<Partial<Informe>>();
+
+  enfermedadesPreEnum: typeof ENFERMEDADES = ENFERMEDADES
 
   constructor() {
 
@@ -22,8 +30,11 @@ export class StepFourComponent {
     this.nextStep.emit();
   }
 
-  setEnfermedades(enfermedad: string) {
-    this.enfermedades = enfermedad;
-    console.log(this.enfermedades)
+  setEnfermedades(enfermedad: ENFERMEDADES) {
+    this.resumen.enfermedadesPre = enfermedad;
+  }
+
+  disabled(): boolean{
+    return this.resumen.enfermedadesPre === undefined;
   }
 }
