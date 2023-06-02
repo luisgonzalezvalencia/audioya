@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Informe } from '../../form-steps.component';
+import { Informe, PROTESIS } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-eleven',
@@ -15,6 +15,8 @@ export class StepElevenComponent {
 
   @Output()
   resumenChange = new EventEmitter<Partial<Informe>>();
+
+  protesisEnum: typeof PROTESIS = PROTESIS
 
   constructor() {
 

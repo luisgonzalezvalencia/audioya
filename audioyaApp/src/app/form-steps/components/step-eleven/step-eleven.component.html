@@ -2,7 +2,9 @@
 <div class="row form-group">
   <h5 class="card-title">"INTRAURICULAR"</h5>
   <div class="col-md-6 col-md-offset-3">
-    <img src="../../../../assets/images/intraauricular.jpg" class="img-responsive img-rounded selected"
+    <img src="../../../../assets/images/intraauricular.jpg"
+    [class]="resumen.protesisSeleccionada === protesisEnum.INTRAURICULAR ? 'selected': ''" 
+    (click)="resumen.protesisSeleccionada = protesisEnum.INTRAURICULAR" class="img-responsive img-rounded"
       alt="Intrauricular">
   </div>
 </div>
@@ -12,4 +14,4 @@
       Informe Final
     </button>
   </div>
-</div>
+</div> 
