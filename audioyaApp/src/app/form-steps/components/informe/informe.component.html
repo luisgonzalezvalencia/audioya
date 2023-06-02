@@ -20,17 +20,22 @@
   <!--en enfermedades previas y malformaciones mi idea es poner la condicion de que si están vacías, se ponga por default "No presenta"-->
 </div>
 <div class="col-md-12">
-  <h4>Audioprótesis</h4>
-  <p>
+  <h4>Resultado Audioprótesis</h4>
+  <span class="text-center">
     {{resumen.protesisSeleccionada}} <br>
-  </p>
-</div>
-
-  <div class="col-md-12">
-    <button type="button" [disabled]="disabled()" (click)="onNextStep()" class="btn btn-primary">
-      Volver al inicio
-    </button>
+  </span>
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+      <img [src]="obtenerUrlImagen()" class="img-responsive img-rounded" />
+    </div>
   </div>
+</div>
+<div class="col-md-12">
+  <hr>
+  <button type="button" [disabled]="disabled()" (click)="onNextStep()" class="btn btn-primary">
+    Volver al inicio
+  </button>
+</div>
 
 
 <!-- export interface Informe {

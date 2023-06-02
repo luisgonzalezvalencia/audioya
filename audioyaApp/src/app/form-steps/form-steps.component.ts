@@ -57,6 +57,12 @@ export interface Informe {
   protesisSeleccionada: PROTESIS
 }
 
+
+export interface ImagesProtesis {
+  url: string;
+  protesis: PROTESIS
+}
+
 @Component({
   selector: 'app-form-steps',
   templateUrl: './form-steps.component.html',
@@ -92,7 +98,7 @@ export class FormStepsComponent implements OnInit {
     }
 
     //si el grado es PROFUNDA y es menor o mayor de edad, vamos al step 3
-    if (this.step == 3  && this.resumen.gradoPerdida == GRADOPERDIDA.PROFUNDA) {
+    if (this.step == 3 && this.resumen.gradoPerdida == GRADOPERDIDA.PROFUNDA) {
       this.step = 7; //saltamos al paso 7
       return;
     }
