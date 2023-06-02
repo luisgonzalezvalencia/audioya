@@ -9,9 +9,9 @@ export enum GRADOPERDIDA {
 }
 
 export enum TIPOPERDIDA {
-  CONDUCTIVA = 'Conductiva',
-  PERCEPTIVA = 'Perceptiva',
-  MIXTA = 'Mixta'
+  CONDUCTIVA = 'Hipoacusia Conductiva',
+  PERCEPTIVA = 'Hipoacusia Perceptiva',
+  MIXTA = 'Hipoacusia Mixta'
 }
 
 export enum ENFERMEDADES {
