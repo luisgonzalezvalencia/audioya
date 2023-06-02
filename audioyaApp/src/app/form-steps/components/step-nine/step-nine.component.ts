@@ -16,6 +16,8 @@ export class StepNineComponent {
   @Output()
   resumenChange = new EventEmitter<Partial<Informe>>();
 
+  protesisEnum: typeof PROTESIS = PROTESIS
+
   constructor() {
 
   }

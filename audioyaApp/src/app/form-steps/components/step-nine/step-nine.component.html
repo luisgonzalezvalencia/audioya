@@ -2,7 +2,9 @@
 <div class="row form-group">
   <h5 class="card-title">"AUDIFONOS OPEN FIT"</h5>
   <div class="col-md-6 col-md-offset-3">
-    <img src="../../../../assets/images/openfit.jpg" data-selected="openfit" class="img-responsive img-rounded selected"
+    <img src="../../../../assets/images/openfit.jpg" 
+    [class]="resumen.protesisSeleccionada === protesisEnum.OPENFIT ? 'selected': ''"
+    (click)="resumen.protesisSeleccionada = protesisEnum.OPENFIT" class="img-responsive img-rounded"
       alt="Open Fit">
   </div>
 </div>
@@ -13,3 +15,4 @@
     </button>
   </div>
 </div>
+ 
