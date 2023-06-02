@@ -104,7 +104,7 @@ export class FormStepsComponent implements OnInit {
     }
 
     // en step 4, si hay enfermedades preexistentes o no hay, vamos al step 10 "RETROAURICULAR"
-    if (this.step == 4 && this.resumen.enfermedadesPre == ENFERMEDADES.NO || this.resumen.enfermedadesPre == ENFERMEDADES.PREEXISTENTES) {
+    if (this.step == 4) {
       this.step = 10; //saltamos al paso 10
       return;
     }
