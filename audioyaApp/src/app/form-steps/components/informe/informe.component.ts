@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Informe } from '../../form-steps.component';
 
 @Component({
@@ -7,7 +7,9 @@ import { Informe } from '../../form-steps.component';
   styleUrls: ['./informe.component.scss']
 })
 export class InformeComponent {
-
+  @Output()
+  nextStep = new EventEmitter<any>();
+  
   @Input()
   resumen: Partial<Informe> = {};
 
@@ -15,5 +17,12 @@ export class InformeComponent {
 
   }
 
+  onNextStep() {
+    this.nextStep.emit();
+  }
+
+  disabled(): boolean{
+    return this.resumen.protesisSeleccionada === undefined;
+  }
 
 }

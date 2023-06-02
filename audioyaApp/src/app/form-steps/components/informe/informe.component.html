@@ -26,6 +26,12 @@
   </p>
 </div>
 
+  <div class="col-md-12">
+    <button type="button" [disabled]="disabled()" (click)="onNextStep()" class="btn btn-primary">
+      Volver al inicio
+    </button>
+  </div>
+
 
 <!-- export interface Informe {
   nombre: string;
