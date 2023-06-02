@@ -15,8 +15,8 @@
         <app-step-eleven [(resumen)]="resumen" (nextStep)="setNextStep()" *ngIf="step === 11"></app-step-eleven>
         <app-step-twelve [(resumen)]="resumen" (nextStep)="setNextStep()" *ngIf="step === 12"></app-step-twelve>
         <app-step-thirteen [(resumen)]="resumen" (nextStep)="setNextStep()" *ngIf="step === 13"></app-step-thirteen>
-        <app-step-fouteen [resumen]="resumen" (nextStep)="setNextStep()" *ngIf="step === 14"></app-step-fouteen>
-        <app-informe (nextStep)="setNextStep()" *ngIf="step === 15"></app-informe>
+        <app-step-fouteen [(resumen)]="resumen" (nextStep)="setNextStep()" *ngIf="step === 14"></app-step-fouteen>
+        <app-informe [resumen]="resumen" (nextStep)="setNextStep()" *ngIf="step === 15"></app-informe>
       </div>
     </div>
   </div>
