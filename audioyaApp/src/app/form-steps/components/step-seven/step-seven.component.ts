@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MALFORMACIONES, Informe } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-seven',
@@ -8,7 +9,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class StepSevenComponent {
   @Output()
   nextStep = new EventEmitter<any>();
-  public malformacion: string = ""
+
+  @Input()
+  resumen: Partial<Informe> = {}
+
+  @Output()
+  resumenChange = new EventEmitter<Partial<Informe>>();
+
+  malformacionesEnum: typeof MALFORMACIONES = MALFORMACIONES
 
   constructor() {
 
@@ -22,8 +30,11 @@ export class StepSevenComponent {
     this.nextStep.emit();
   }
 
-  setMalformacion( malformaciones: string ){
-    this.malformacion = malformaciones
-    console.log(this.malformacion)
+  setMalformacion( malfor: MALFORMACIONES ){
+    this.resumen.malformaciones = malfor
+  }
+  
+  disabled(): boolean{
+    return this.resumen.gradoPerdida === undefined;
   }
 }

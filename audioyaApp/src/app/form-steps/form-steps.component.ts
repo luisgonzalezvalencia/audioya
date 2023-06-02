@@ -25,6 +25,11 @@ export enum TIPOPROTESIS{
   NOVISIBLE = 'No visible'
 }
 
+export enum MALFORMACIONES{
+  PRESENTAMALFORMACIONES = "Presenta malformaciones",
+  NOPRESENTAMALFORMACIONES = "No presenta malformaciones"
+}
+
 export interface Informe {
   nombre: string;
   edad: number;
@@ -32,7 +37,8 @@ export interface Informe {
   gradoPerdida: GRADOPERDIDA,
   tipoPerdida: TIPOPERDIDA,
   enfermedadesPre: ENFERMEDADES,
-  tipoPro: TIPOPROTESIS
+  tipoPro: TIPOPROTESIS,
+  malformaciones: MALFORMACIONES
 }
 
 @Component({
@@ -111,10 +117,24 @@ export class FormStepsComponent implements OnInit {
       return;
     } 
 
+    // en step 6, si es NO VISIBLE vamos al step 11
     if (this.step == 6 && this.resumen.tipoPro == TIPOPROTESIS.NOVISIBLE) {
       this.step = 11; //saltamos al paso 11
       return;
     } 
+
+    // en step 7, si NO HAY MALFORMACIONES vamos al step 13
+    if (this.step == 7 && this.resumen.malformaciones == MALFORMACIONES.NOPRESENTAMALFORMACIONES) {
+      this.step = 13; //saltamos al paso 13
+      return;
+    } 
+
+    // en step 7, si HAY MALFORMACIONES vamos al step 14
+    if (this.step == 7 && this.resumen.malformaciones == MALFORMACIONES.PRESENTAMALFORMACIONES) {
+      this.step = 14; //saltamos al paso 14
+      return;
+    }
+
 
     this.step++;
     return;
