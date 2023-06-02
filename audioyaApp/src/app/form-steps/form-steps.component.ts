@@ -20,6 +20,10 @@ export enum ENFERMEDADES {
   NO = 'No presenta'
 }
 
+export enum TIPOPROTESIS{
+  VISIBLE = 'Visible',
+  NOVISIBLE = 'No visible'
+}
 
 export interface Informe {
   nombre: string;
@@ -27,7 +31,8 @@ export interface Informe {
   genero: string;
   gradoPerdida: GRADOPERDIDA,
   tipoPerdida: TIPOPERDIDA,
-  enfermedadesPre: ENFERMEDADES
+  enfermedadesPre: ENFERMEDADES,
+  tipoPro: TIPOPROTESIS
 }
 
 @Component({
@@ -97,6 +102,17 @@ export class FormStepsComponent implements OnInit {
     // en step 5, si es ALTASFRECUENCIAS vamos al step 9
     if (this.step == 5 && this.resumen.gradoPerdida == GRADOPERDIDA.ALTASFRECUENCIAS) {
       this.step = 9; //saltamos al paso 9
+      return;
+    } 
+
+    // en step 6, si es VISIBLE vamos al step 10
+    if (this.step == 6 && this.resumen.tipoPro == TIPOPROTESIS.VISIBLE) {
+      this.step = 10; //saltamos al paso 10
+      return;
+    } 
+
+    if (this.step == 6 && this.resumen.tipoPro == TIPOPROTESIS.NOVISIBLE) {
+      this.step = 11; //saltamos al paso 11
       return;
     } 
 

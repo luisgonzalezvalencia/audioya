@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TIPOPROTESIS, Informe } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-six',
@@ -8,7 +9,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class StepSixComponent {
   @Output()
   nextStep = new EventEmitter<any>();
-  public tipo: string = ""
+ 
+  @Input()
+  resumen: Partial<Informe> = {}
+
+  @Output()
+  resumenChange = new EventEmitter<Partial<Informe>>();
+
+  tipoProtesisEnum: typeof TIPOPROTESIS = TIPOPROTESIS
 
   constructor() {
 
@@ -22,8 +30,11 @@ export class StepSixComponent {
     this.nextStep.emit();
   }
 
-  setTipo( tipoLeveSevero: string ){
-    this.tipo = tipoLeveSevero
-    console.log(this.tipo)
+  setTipo( tipoProt: TIPOPROTESIS ){
+    this.resumen.tipoPro = tipoProt
+  }
+
+  disabled(): boolean{
+    return this.resumen.gradoPerdida === undefined;
   }
 }
