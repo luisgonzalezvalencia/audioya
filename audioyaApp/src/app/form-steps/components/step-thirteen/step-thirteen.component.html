@@ -2,13 +2,13 @@
 <div class="row form-group">
   <h5 class="card-title">"IMPLANTE DE OÍDO MEDIO" O "IMPLANTE COCLEAR"</h5>
 
-  <div class="col-md-6">
+  <div class="col-xs-6 col-md-6">
     <img src="../../../../assets/images/oidomedio.jpg"
       [class]="resumen.protesisSeleccionada === protesisEnum.OIDOMEDIO ?  'selected': ''"
       (click)="resumen.protesisSeleccionada  = protesisEnum.OIDOMEDIO" class="img-responsive img-rounded" alt="...">
   </div>
 
-  <div class="col-md-6">
+  <div class="col-xs-6 col-md-6">
     <img src="../../../../assets/images/implantecoclear.jpg"
       [class]="resumen.protesisSeleccionada === protesisEnum.COCLEAR ?  'selected': ''"
       (click)="resumen.protesisSeleccionada = protesisEnum.COCLEAR" class="img-responsive img-rounded" alt="...">

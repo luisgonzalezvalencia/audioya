@@ -23,13 +23,14 @@ export class StepTenComponent {
   }
 
   ngOnInit(): void {
+    this.resumen.protesisSeleccionada = this.protesisEnum.RETROAURICULAR;
   }
 
   onNextStep() {
     this.nextStep.emit();
   }
 
-  disabled(): boolean{
+  disabled(): boolean {
     return this.resumen.protesisSeleccionada === undefined;
   }
-} 
+}
