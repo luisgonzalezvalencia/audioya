@@ -2,20 +2,22 @@
 <div class="row form-group">
   <h5 class="card-title">"AUDÍFONO INTRACANAL" O "AUDÍFONO RITE"</h5>
   <div class="col-md-6">
-    <img src="../../../../assets/images/intracanal.jpg" [class]="option === 'INTRACANAL' ? 'selected': ''"
-      (click)="option = 'INTRACANAL'" class="img-responsive img-rounded" alt="...">
+    <img src="../../../../assets/images/intracanal.jpg"
+      [class]="resumen.protesisSeleccionada === protesisEnum.INTRACANAL ?  'selected': ''"
+      (click)="resumen.protesisSeleccionada  = protesisEnum.INTRACANAL" class="img-responsive img-rounded" alt="...">
   </div>
 
   <div class="col-md-6">
-    <img src="../../../../assets/images/audifonorite.png" [class]="option === 'RITE' ? 'selected': ''"
-      (click)="option = 'RITE'" class="img-responsive img-rounded" alt="...">
+    <img src="../../../../assets/images/audifonorite.png"
+      [class]="resumen.protesisSeleccionada === protesisEnum.RITE ?  'selected': ''"
+      (click)="resumen.protesisSeleccionada  = protesisEnum.RITE" class="img-responsive img-rounded" alt="...">
   </div>
 
 </div>
 <div class="row form-group">
   <div class="px-6 pt-4 pb-2">
-    <button type="button" (click)="onNextStep()" class="btn btn-primary">
-      Siguiente
+    <button type="button" [disabled]="disabled()" (click)="onNextStep()" class="btn btn-primary">
+      Informe Final
     </button>
   </div>
 </div>

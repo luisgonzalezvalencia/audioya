@@ -8,8 +8,8 @@
 </div>
 <div class="row form-group">
   <div class="px-6 pt-4 pb-2">
-    <button type="button" (click)="onNextStep()" class="btn btn-primary">
-      Siguiente
+    <button type="button" [disabled]="disabled()" (click)="onNextStep()" class="btn btn-primary">
+      Informe Final
     </button>
   </div>
 </div>

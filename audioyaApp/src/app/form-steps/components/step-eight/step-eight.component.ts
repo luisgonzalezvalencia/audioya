@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Informe } from '../../form-steps.component';
+import { Informe, PROTESIS } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-eight',
@@ -21,11 +21,14 @@ export class StepEightComponent {
   }
 
   ngOnInit(): void {
-
+    this.resumen.protesisSeleccionada = PROTESIS.VARILLAOSEA;
   }
 
   onNextStep() {
     this.nextStep.emit();
   }
 
+  disabled(): boolean{
+    return this.resumen.protesisSeleccionada === undefined;
+  }
 }

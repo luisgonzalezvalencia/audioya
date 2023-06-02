@@ -26,4 +26,8 @@ export class StepTenComponent {
   onNextStep() {
     this.nextStep.emit();
   }
+
+  disabled(): boolean{
+    return this.resumen.protesisSeleccionada === undefined;
+  }
 }

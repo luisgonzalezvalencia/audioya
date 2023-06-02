@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Informe } from '../../form-steps.component';
+import { Informe, PROTESIS } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-fouteen',
@@ -16,6 +16,9 @@ export class StepFouteenComponent {
   @Output()
   resumenChange = new EventEmitter<Partial<Informe>>();
 
+
+  protesisEnum: typeof PROTESIS = PROTESIS
+
   public option: string = "";
 
   constructor() {
@@ -27,5 +30,9 @@ export class StepFouteenComponent {
 
   onNextStep() {
     this.nextStep.emit();
+  }
+
+  disabled(): boolean{
+    return this.resumen.protesisSeleccionada === undefined;
   }
 }

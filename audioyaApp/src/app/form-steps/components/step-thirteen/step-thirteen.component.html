@@ -3,19 +3,21 @@
   <h5 class="card-title">"IMPLANTE DE OÍDO MEDIO" O "IMPLANTE COCLEAR"</h5>
 
   <div class="col-md-6">
-    <img src="../../../../assets/images/oidomedio.jpg" [class]="option === 'OIDOMEDIO' ? 'selected': ''"
-      (click)="option = 'OIDOMEDIO'" class="img-responsive img-rounded" alt="Oido Medio">
+    <img src="../../../../assets/images/oidomedio.jpg"
+      [class]="resumen.protesisSeleccionada === protesisEnum.OIDOMEDIO ?  'selected': ''"
+      (click)="resumen.protesisSeleccionada  = protesisEnum.OIDOMEDIO" class="img-responsive img-rounded" alt="...">
   </div>
 
   <div class="col-md-6">
-    <img src="../../../../assets/images/implantecoclear.jpg" [class]="option === 'IMPLANTECOCLEAR' ? 'selected': ''"
-      (click)="option = 'IMPLANTECOCLEAR'" class="img-responsive img-rounded" alt="Implante Coclear">
+    <img src="../../../../assets/images/implantecoclear.jpg"
+      [class]="resumen.protesisSeleccionada === protesisEnum.COCLEAR ?  'selected': ''"
+      (click)="resumen.protesisSeleccionada = protesisEnum.COCLEAR" class="img-responsive img-rounded" alt="...">
   </div>
 </div>
 <div class="row form-group">
   <div class="px-6 pt-4 pb-2">
-    <button type="button" (click)="onNextStep()" class="btn btn-primary">
-      Siguiente
+    <button type="button" [disabled]="disabled()" (click)="onNextStep()" class="btn btn-primary">
+      Informe Final
     </button>
   </div>
 </div>
