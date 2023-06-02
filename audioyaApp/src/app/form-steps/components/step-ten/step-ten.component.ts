@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Informe } from '../../form-steps.component';
+import { Informe, PROTESIS } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-ten',
@@ -16,6 +16,8 @@ export class StepTenComponent {
   @Output()
   resumenChange = new EventEmitter<Partial<Informe>>();
 
+  protesisEnum: typeof PROTESIS = PROTESIS
+
   constructor() {
 
   }
@@ -30,4 +32,4 @@ export class StepTenComponent {
   disabled(): boolean{
     return this.resumen.protesisSeleccionada === undefined;
   }
-}
+} 

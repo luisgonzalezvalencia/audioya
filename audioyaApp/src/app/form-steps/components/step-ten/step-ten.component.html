@@ -2,7 +2,9 @@
 <div class="row form-group">
   <h5 class="card-title">"RETROAURICULAR"</h5>
   <div class="col-md-6 col-md-offset-3">
-    <img src="../../../../assets/images/retroaricular.jpg" class="img-responsive img-rounded selected"
+    <img src="../../../../assets/images/retroaricular.jpg" 
+    [class]="resumen.protesisSeleccionada === protesisEnum.RETROAURICULAR ? 'selected': ''" 
+    (click)="resumen.protesisSeleccionada = protesisEnum.RETROAURICULAR" class="img-responsive img-rounded"
       alt="Retro Auricular">
   </div>
 </div>
@@ -13,3 +15,4 @@
     </button>
   </div>
 </div>
+ 
