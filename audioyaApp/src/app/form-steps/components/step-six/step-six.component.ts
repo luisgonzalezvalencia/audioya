@@ -9,7 +9,7 @@ import { TIPOPROTESIS, Informe } from '../../form-steps.component';
 export class StepSixComponent {
   @Output()
   nextStep = new EventEmitter<any>();
- 
+
   @Input()
   resumen: Partial<Informe> = {}
 
@@ -35,6 +35,6 @@ export class StepSixComponent {
   }
 
   disabled(): boolean{
-    return this.resumen.gradoPerdida === undefined;
+    return this.resumen.tipoPro === undefined;
   }
 }

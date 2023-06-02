@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Informe } from '../../form-steps.component';
 
 @Component({
   selector: 'app-step-twelve',
@@ -10,6 +11,12 @@ export class StepTwelveComponent {
   nextStep = new EventEmitter<any>();
 
   public option: string = "";
+
+  @Input()
+  resumen: Partial<Informe> = {}
+
+  @Output()
+  resumenChange = new EventEmitter<Partial<Informe>>();
 
   constructor() {
 

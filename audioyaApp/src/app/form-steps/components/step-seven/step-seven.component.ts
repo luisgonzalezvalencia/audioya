@@ -33,8 +33,8 @@ export class StepSevenComponent {
   setMalformacion( malfor: MALFORMACIONES ){
     this.resumen.malformaciones = malfor
   }
-  
+
   disabled(): boolean{
-    return this.resumen.gradoPerdida === undefined;
+    return this.resumen.malformaciones === undefined;
   }
 }
