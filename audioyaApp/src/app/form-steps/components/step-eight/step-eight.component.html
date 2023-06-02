@@ -3,7 +3,8 @@
   <h5 class="card-title">"DIADEMAS VO"</h5>
   <div class="col-md-6 col-md-offset-3 box-image">
     <img src="../../../../assets/images/varillaosea.jpg" data-value="varillaosea"
-      class="img-responsive img-rounded selected" alt="Varilla Osea">
+    [class]="resumen.protesisSeleccionada === protesisEnum.DIADEMASVO ? 'selected': ''"
+    (click)="resumen.protesisSeleccionada = protesisEnum.DIADEMASVO" class="img-responsive img-rounded" alt="Varilla Osea">
   </div>
 </div>
 <div class="row form-group">
@@ -13,3 +14,4 @@
     </button>
   </div>
 </div>
+ 
