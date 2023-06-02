@@ -76,9 +76,27 @@ export class FormStepsComponent implements OnInit {
       return;
     } 
 
-    // en step 4, si hay engermedades preexistentes o no hay, vamos al step 10 "RETROAURICULAR"
+    // en step 4, si hay enfermedades preexistentes o no hay, vamos al step 10 "RETROAURICULAR"
     if (this.step == 4 && this.resumen.enfermedadesPre == ENFERMEDADES.NO || this.resumen.enfermedadesPre == ENFERMEDADES.PREEXISTENTES) {
       this.step = 10; //saltamos al paso 10
+      return;
+    } 
+
+    // en step 5, si es LEVESEVERA vamos al step 6
+    if (this.step == 5 && this.resumen.gradoPerdida == GRADOPERDIDA.LEVESEVERA) {
+      this.step = 6; //saltamos al paso 6
+      return;
+    } 
+
+    // en step 5, si es MODERADA vamos al step 12
+    if (this.step == 5 && this.resumen.gradoPerdida == GRADOPERDIDA.MODERADA) {
+      this.step = 12; //saltamos al paso 12
+      return;
+    } 
+  
+    // en step 5, si es ALTASFRECUENCIAS vamos al step 9
+    if (this.step == 5 && this.resumen.gradoPerdida == GRADOPERDIDA.ALTASFRECUENCIAS) {
+      this.step = 9; //saltamos al paso 9
       return;
     } 
 
