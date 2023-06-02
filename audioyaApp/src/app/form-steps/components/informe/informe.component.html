@@ -3,7 +3,7 @@
 <div class="col-md-12">
   <p>
     Paciente: {{resumen.nombre}} Edad: {{resumen.edad}} años. <br>
-    Sexo: {{resumen.genero}} <br>
+    Sexo: {{resumen.genero == "M" ? "Masculino": "Femenino"}} <br>
   </p>
 </div>
 <div class="col-md-12">
@@ -12,9 +12,10 @@
   <p>
     Grado de Perdida: {{resumen.gradoPerdida}} <br>
     Tipo de Perdida: {{resumen.tipoPerdida}} <br>
-    {{resumen.enfermedadesPre ? "Enfermedades Previas: "+resumen.enfermedadesPre : "" }} <br
-      *ngIf="resumen.enfermedadesPre">
-    {{resumen.malformaciones ? "Malformaciones: "+resumen.malformaciones : "" }} <br *ngIf="resumen.malformaciones">
+    {{resumen.enfermedadesPre ? "Enfermedades Previas: "+resumen.enfermedadesPre : "" }}
+    <br *ngIf="resumen.enfermedadesPre">
+    {{resumen.malformaciones ? "Malformaciones: "+resumen.malformaciones : "" }}
+    <br *ngIf="resumen.malformaciones">
   </p>
 
   <!--en enfermedades previas y malformaciones mi idea es poner la condicion de que si están vacías, se ponga por default "No presenta"-->
